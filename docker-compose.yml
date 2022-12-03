@@ -11,4 +11,4 @@ services:
       - trilium:/home/node/trilium-data
 
 volumes:
-  trilium:
+  trilium: ~/trilium-data
