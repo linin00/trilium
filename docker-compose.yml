@@ -8,4 +8,4 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ~/trilium-data:/home/node/trilium-data
+      - /www/trilium-data:/home/node/trilium-data
