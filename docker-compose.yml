@@ -3,9 +3,14 @@ services:
   trilium:
     image: zadam/trilium
     restart: always
-    environment:
-      - TRILIUM_DATA_DIR=/home/node/trilium-data
     ports:
       - "8080:8080"
+    environment:
+      - LANG=zh_CN.UTF-8
+      - LC_ALL=zh_CN.UTF-8
+      - TZ=Asia/Shanghai
+      - TRILIUM_DATA_DIR=/home/node/trilium-data
     volumes:
-      - /home/leon/trilium-data:/home/node/trilium-data
+      - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime
+      - /etc/timezone:/etc/timezone
+      - ~/trilium-data:/home/node/trilium-data
