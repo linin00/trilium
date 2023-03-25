@@ -13,4 +13,4 @@ services:
     volumes:
       - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime
       - /etc/timezone:/etc/timezone
-      - ~/trilium-data:/home/node/trilium-data
+      - ./trilium-data:/home/node/trilium-data
